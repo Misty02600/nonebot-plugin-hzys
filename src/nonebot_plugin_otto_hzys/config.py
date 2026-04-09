@@ -1,14 +1,14 @@
-from nonebot import get_driver, get_plugin_config
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class Config(BaseModel):
-    pass
+    model_config = ConfigDict(extra="ignore")
 
-
-# 配置加载
-plugin_config: Config = get_plugin_config(Config)
-global_config = get_driver().config
-
-# 全局名称
-NICKNAME: str = next(iter(global_config.nickname), "")
+    otto_hzys_backend_url: str = Field(
+        default="https://otto-hzys-api-backend.vercel.app",
+        description="兼容 otto-hzys API 的后端地址",
+    )
+    otto_hzys_api_key: str | None = Field(
+        default=None,
+        description="兼容后端的 Bearer Token",
+    )

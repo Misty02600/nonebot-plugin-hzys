@@ -1,20 +1,20 @@
-# from nonebot import logger, require
-from nonebot.plugin import PluginMetadata  # , inherit_supported_adapters
+from nonebot import require
+from nonebot.plugin import PluginMetadata
 
-# require("nonebot_plugin_uninfo")
-# require("nonebot_plugin_alconna")
-# require("nonebot_plugin_localstore")
-# require("nonebot_plugin_apscheduler")
+require("nonebot_plugin_alconna")
+
+from .command import otto_cmd
 from .config import Config
 
 __plugin_meta__ = PluginMetadata(
-    name="名称",
-    description="描述",
-    usage="用法",
-    type="application",  # application: 功能性插件 | library: 库插件
+    name="otto 活字印刷",
+    description="调用兼容后端生成 otto 活字印刷语音",
+    usage="/ottohzys 大家好啊",
+    type="application",
     homepage="https://github.com/Misty02600/nonebot-plugin-otto-hzys",
     config=Config,
-    # supported_adapters=inherit_supported_adapters("nonebot_plugin_alconna"),
     supported_adapters={"~onebot.v11"},
-    extra={"author": "Misty02600 <your@mail.com>"},
+    extra={"author": "Misty02600 <Misty02600@gmail.com>"},
 )
+
+__all__ = ("__plugin_meta__", "otto_cmd")

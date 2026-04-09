@@ -15,7 +15,7 @@
 
 ## 📖 介绍
 
-这里是插件的详细介绍部分
+由于饼干的 [`nonebot-plugin-ottohzys`](https://github.com/lgc-NB2Dev/nonebot-plugin-ottohzys) 已归档，写了这个插件来跟踪最新上游数据。服务端来自 [`kaixinol/otto-hzys-api-backend`](https://github.com/kaixinol/otto-hzys-api-backend)，上游数据源来自 [`hua-zhi-wan/otto-hzys`](https://github.com/hua-zhi-wan/otto-hzys)。
 
 ## 💿 安装
 
@@ -88,21 +88,21 @@
 
 ## ⚙️ 配置
 
-插件使用[nonebot_plugin_localstore](https://github.com/nonebot/plugin-localstore)储存数据和缓存。
+在 NoneBot 项目的 `.env` 中配置：
 
-在 nonebot2 项目的`.env`文件中添加下表中的必填配置
+| 配置项 | 必填 | 默认值 | 说明 |
+| :-- | :--: | :--: | :-- |
+| `OTTO_HZYS_BACKEND_URL` | 否 | `https://otto-hzys-api-backend.vercel.app` | 后端地址，例如 `http://127.0.0.1:3000` |
+| `OTTO_HZYS_API_KEY` | 否 | 无 | 后端 Token |
 
-| 配置项  | 必填  | 默认值 |   说明   |
-| :-----: | :---: | :----: | :------: |
-| 配置项1 |  是   |   无   | 配置说明 |
-| 配置项2 |  否   |   无   | 配置说明 |
+示例：
+
+```env
+OTTO_HZYS_BACKEND_URL=http://127.0.0.1:3000
+```
 
 ## 🎉 使用
 ### 指令表
-| 指令  | 权限  | 需要@ | 范围  |   说明   |
-| :---: | :---: | :---: | :---: | :------: |
-| 指令1 | 主人  |  否   | 私聊  | 指令说明 |
-| 指令2 | 群员  |  是   | 群聊  | 指令说明 |
-
-### 🎨 效果图
-如果有效果图的话
+| 指令 | 说明 |
+| :-- | :-- |
+| `ottohzys/活字印刷 <文本>` | 生成活字印刷语音 |
