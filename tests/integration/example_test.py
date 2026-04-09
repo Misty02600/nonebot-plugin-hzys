@@ -1,6 +1,7 @@
 import pytest
 from nonebot.adapters.onebot.v11 import Bot, Message
 from nonebug import App
+
 from ..units.fake import fake_group_message_event_v11
 
 
