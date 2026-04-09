@@ -2,8 +2,8 @@
     <a href="https://v2.nonebot.dev/store">
     <img src="https://github.com/Misty02600/nonebot-plugin-template/releases/download/assets/NoneBotPlugin.png" width="310" alt="logo"></a>
 
-## ✨ nonebot-plugin-otto-hzys ✨
-[![LICENSE](https://img.shields.io/github/license/Misty02600/nonebot-plugin-otto-hzys.svg)](./LICENSE)
+## ✨ nonebot-plugin-hzys ✨
+[![LICENSE](https://img.shields.io/github/license/Misty02600/nonebot-plugin-hzys.svg)](./LICENSE)
 [![python](https://img.shields.io/badge/python-3.11+-blue.svg?logo=python&logoColor=white)](https://www.python.org)
 [![Adapters](https://img.shields.io/badge/Adapters-OneBot%20v11-blue)](#supported-adapters)
 <br/>
@@ -23,13 +23,13 @@
 <summary>使用 nb-cli 安装</summary>
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
 
-    nb plugin install nonebot-plugin-otto-hzys --upgrade
+    nb plugin install nonebot-plugin-hzys --upgrade
 使用 **pypi** 源安装
 
-    nb plugin install nonebot-plugin-otto-hzys --upgrade -i "https://pypi.org/simple"
+    nb plugin install nonebot-plugin-hzys --upgrade -i "https://pypi.org/simple"
 使用**清华源**安装
 
-    nb plugin install nonebot-plugin-otto-hzys --upgrade -i "https://pypi.tuna.tsinghua.edu.cn/simple"
+    nb plugin install nonebot-plugin-hzys --upgrade -i "https://pypi.tuna.tsinghua.edu.cn/simple"
 
 
 </details>
@@ -41,32 +41,32 @@
 <details open>
 <summary>uv</summary>
 
-    uv add nonebot-plugin-otto-hzys
+    uv add nonebot-plugin-hzys
 安装仓库 main 分支
 
-    uv add git+https://github.com/Misty02600/nonebot-plugin-otto-hzys@main
+    uv add git+https://github.com/Misty02600/nonebot-plugin-hzys@main
 </details>
 
 <details>
 <summary>pdm</summary>
 
-    pdm add nonebot-plugin-otto-hzys
+    pdm add nonebot-plugin-hzys
 安装仓库 main 分支
 
-    pdm add git+https://github.com/Misty02600/nonebot-plugin-otto-hzys@main
+    pdm add git+https://github.com/Misty02600/nonebot-plugin-hzys@main
 </details>
 <details>
 <summary>poetry</summary>
 
-    poetry add nonebot-plugin-otto-hzys
+    poetry add nonebot-plugin-hzys
 安装仓库 main 分支
 
-    poetry add git+https://github.com/Misty02600/nonebot-plugin-otto-hzys@main
+    poetry add git+https://github.com/Misty02600/nonebot-plugin-hzys@main
 </details>
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
 
-    plugins = ["nonebot_plugin_otto_hzys"]
+    plugins = ["nonebot_plugin_hzys"]
 
 </details>
 
@@ -75,13 +75,13 @@
 
 [nbr](https://github.com/fllesser/nbr) 是一个基于 uv 的 nb-cli，可以方便地管理 nonebot2
 
-    nbr plugin install nonebot-plugin-otto-hzys
+    nbr plugin install nonebot-plugin-hzys
 使用 **pypi** 源安装
 
-    nbr plugin install nonebot-plugin-otto-hzys -i "https://pypi.org/simple"
+    nbr plugin install nonebot-plugin-hzys -i "https://pypi.org/simple"
 使用**清华源**安装
 
-    nbr plugin install nonebot-plugin-otto-hzys -i "https://pypi.tuna.tsinghua.edu.cn/simple"
+    nbr plugin install nonebot-plugin-hzys -i "https://pypi.tuna.tsinghua.edu.cn/simple"
 
 </details>
 

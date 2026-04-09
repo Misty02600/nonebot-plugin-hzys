@@ -1,5 +1,5 @@
 [project]
-name = "nonebot-plugin-otto-hzys"
+name = "nonebot-plugin-hzys"
 version = "0.1.0"
 description = "插件描述"
 readme = "README.md"
@@ -17,9 +17,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Misty02600/nonebot-plugin-otto-hzys"
-Issues = "https://github.com/Misty02600/nonebot-plugin-otto-hzys/issues"
-Repository = "https://github.com/Misty02600/nonebot-plugin-otto-hzys.git"
+Homepage = "https://github.com/Misty02600/nonebot-plugin-hzys"
+Issues = "https://github.com/Misty02600/nonebot-plugin-hzys/issues"
+Repository = "https://github.com/Misty02600/nonebot-plugin-hzys.git"
 
 [dependency-groups]
 dev = [
@@ -39,7 +39,7 @@ test = [
 ]
 
 [tool.nonebot.plugins]
-nonebot-plugin-otto-hzys = ["nonebot_plugin_otto_hzys"]
+nonebot-plugin-hzys = ["nonebot_plugin_hzys"]
 
 [tool.nonebot.adapters]
 nonebot-adapter-onebot = [

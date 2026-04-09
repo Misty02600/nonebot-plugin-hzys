@@ -3,7 +3,7 @@ import pytest
 
 
 def _options():
-    from nonebot_plugin_otto_hzys.backend import OttoSynthesisOptions
+    from nonebot_plugin_hzys.backend import OttoSynthesisOptions
 
     return OttoSynthesisOptions(
         is_ysdd=True,
@@ -14,7 +14,7 @@ def _options():
 
 @pytest.mark.asyncio
 async def test_backend_client_synthesize_success() -> None:
-    from nonebot_plugin_otto_hzys.backend import OttoBackendClient
+    from nonebot_plugin_hzys.backend import OttoBackendClient
 
     audio_bytes = b"RIFF....WAVE"
 
@@ -44,7 +44,7 @@ async def test_backend_client_synthesize_success() -> None:
 
 @pytest.mark.asyncio
 async def test_backend_client_synthesize_http_error() -> None:
-    from nonebot_plugin_otto_hzys.backend import (
+    from nonebot_plugin_hzys.backend import (
         OttoBackendClient,
         OttoBackendRequestError,
     )
