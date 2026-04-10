@@ -69,3 +69,56 @@ async def test_command_sends_voice(app: App, monkeypatch: pytest.MonkeyPatch) ->
             FallbackMessage("[voice]"),
             bot=bot,
         )
+
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize(
+    "trigger",
+    [
+        "/活字印刷 大家好啊",
+        "/hzys 大家好啊",
+        "/otto活字印刷 大家好啊",
+        "/ottohzys 大家好啊",
+        "/电棍活字印刷 大家好啊",
+        "/电棍hzys 大家好啊",
+    ],
+)
+async def test_command_aliases(
+    app: App, monkeypatch: pytest.MonkeyPatch, trigger: str
+) -> None:
+    from nonebot_plugin_alconna.uniseg.fallback import FallbackMessage
+
+    from nonebot_plugin_hzys import command
+    from nonebot_plugin_hzys.backend import OttoSynthesisOptions
+    from nonebot_plugin_hzys.config import Config
+
+    class FakeClient:
+        async def synthesize(
+            self, text: str, *, options: OttoSynthesisOptions
+        ) -> bytes:
+            assert text == "大家好啊"
+            assert options.is_ysdd is True
+            assert options.use_non_ddb_pinyin is True
+            assert options.is_sliced is False
+            return b"RIFF....WAVE"
+
+    monkeypatch.setattr(
+        command,
+        "get_plugin_config",
+        lambda _: Config(otto_hzys_backend_url="https://example.com"),
+    )
+    monkeypatch.setattr(command, "build_backend_client", lambda _: FakeClient())
+
+    async with app.test_matcher(command.otto_cmd) as ctx:
+        bot = ctx.create_bot(base=Bot)
+        event = fake_group_message_event_v11(
+            message=Message(trigger),
+            raw_message=trigger,
+        )
+
+        ctx.receive_event(bot, event)
+        ctx.should_call_send(
+            event,
+            FallbackMessage("[voice]"),
+            bot=bot,
+        )

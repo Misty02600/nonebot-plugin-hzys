@@ -12,9 +12,17 @@ from .backend import (
 )
 from .config import Config
 
+COMMAND_ALIASES = {
+    "活字印刷",
+    "hzys",
+    "otto活字印刷",
+    "电棍活字印刷",
+    "电棍hzys",
+}
+
 otto_cmd = on_alconna(
     Alconna("ottohzys", Args["text", AllParam]),
-    aliases={"活字印刷"},
+    aliases=COMMAND_ALIASES,
     use_cmd_start=True,
     block=True,
 )

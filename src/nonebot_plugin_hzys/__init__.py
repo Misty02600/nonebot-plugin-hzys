@@ -9,7 +9,7 @@ from .config import Config
 __plugin_meta__ = PluginMetadata(
     name="otto 活字印刷",
     description="调用兼容后端生成 otto 活字印刷语音",
-    usage="/ottohzys 大家好啊",
+    usage="/活字印刷 大家好啊",
     type="application",
     homepage="https://github.com/Misty02600/nonebot-plugin-hzys",
     config=Config,

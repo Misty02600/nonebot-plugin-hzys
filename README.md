@@ -5,7 +5,7 @@
 ## ✨ nonebot-plugin-hzys ✨
 [![LICENSE](https://img.shields.io/github/license/Misty02600/nonebot-plugin-hzys.svg)](./LICENSE)
 [![python](https://img.shields.io/badge/python-3.11+-blue.svg?logo=python&logoColor=white)](https://www.python.org)
-[![Adapters](https://img.shields.io/badge/Adapters-OneBot%20v11-blue)](#supported-adapters)
+[![Adapters](https://img.shields.io/badge/Adapters-Alconna-blue)](https://github.com/nonebot/plugin-alconna)
 <br/>
 
 [![uv](https://img.shields.io/badge/package%20manager-uv-black?logo=uv)](https://github.com/astral-sh/uv)
@@ -105,4 +105,8 @@ OTTO_HZYS_BACKEND_URL=http://127.0.0.1:3000
 ### 指令表
 | 指令 | 说明 |
 | :-- | :-- |
-| `ottohzys/活字印刷 <文本>` | 生成活字印刷语音 |
+| `[(otto/电棍)](活字印刷/hzys) <文本>` | 生成活字印刷语音 |
+
+前缀 `otto` / `电棍` 可省略，后缀 `活字印刷` / `hzys` 必填。
+
+可用示例：`/活字印刷 大家好啊`、`/hzys 大家好啊`、`/otto活字印刷 大家好啊`、`/ottohzys 大家好啊`、`/电棍活字印刷 大家好啊`、`/电棍hzys 大家好啊`
